@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Solicitudes de Adopción</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light p-4">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2>Solicitudes de Adopción</h2>
+            <form method="post" action="/logout/" class="d-inline">
+                <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                <button type="submit" class="btn btn-outline-danger btn-sm">Cerrar sesión</button>
+            </form>
+        </div>
+        <table class="table table-bordered table-striped bg-white">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Patio (m²)</th>
+                    <th>Cupos</th>
+                    <th>Estado</th>
+                    <th>Motivo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in solicitudes %}
+                <tr>
+                    <td>{{ s.id }}</td>
+                    <td>{{ s.nombre }}</td>
+                    <td>{{ s.edad }}</td>
+                    <td>{{ s.metros_patio }}</td>
+                    <td>{{ s.cupos_al_momento }}</td>
+                    <td>{{ s.estado }}</td>
+                    <td>{{ s.motivo|default:"-" }}</td>
+                    <td>
+                        <a href="/solicitudes/{{ s.id }}/editar/" class="btn btn-sm btn-warning">Editar</a>
+                        <a href="/solicitudes/{{ s.id }}/eliminar/" class="btn btn-sm btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="8" class="text-center">No hay solicitudes registradas.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "nombre": "Carlos Perez",
+    "edad": 28,
+    "metros_patio": 25.0,
+    "cupos": 3,
+    "estado": "Aceptado",
+    "motivo": "Cumple con todos los requisitos"
+  },
+  {
+    "nombre": "Ana Gomez",
+    "edad": 22,
+    "metros_patio": 8.5,
+    "cupos": 2,
+    "estado": "Rechazado",
+    "motivo": "Espacio insuficiente (requiere al menos 15 m²)"
+  },
+  {
+    "nombre": "Gabriel Riquelme",
+    "edad": 22,
+    "metros_patio": 20.0,
+    "cupos": 1,
+    "estado": "Aceptado",
+    "motivo": "Cumple con todos los requisitos de adopción"
+  }
+]
