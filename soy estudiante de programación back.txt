@@ -1,0 +1,12 @@
+soy estudiante de programación back end de cuarto semestre 
+quiero resolver este problema: Los rescatistas reciben múltiples solicitudes diarias y necesitan filtrar rápidamente postulantes según su edad legal y la cantidad de mascotas que el albergue tiene listas para entregar de inmediato.
+ayúdame a escribir un plan de 2 planas con dos apartados:
+1) negocio: problema, solución, alcance, y priorización 
+moscow (must, should ,cound, won't)
+
+2) técnico: datos de entradas con su tipo, la regla de la decisión con 4 resultados distintos, y que mostraría una pantalla web 
+
+Restricción: se resuelve con variables, if/elif, un archivo
+JSON y una sola vista Django. Sin base de datos, sin login,
+sin API.
+ 
